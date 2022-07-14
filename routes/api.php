@@ -116,6 +116,10 @@ Route::prefix('v1')
                     Route::patch('user', [UsersController::class, 'update'])
                         ->name('user.update');
 
+                    // 编辑登录用户信息
+                    Route::put('user', [UsersController::class, 'update'])
+                        ->name('user.update');
+
                     // 上传图片
                     Route::post('images', [ImagesController::class, 'store'])
                         ->name('images.store');
