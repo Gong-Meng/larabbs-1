@@ -10,6 +10,7 @@ use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable implements JWTSubject
 {
+    use Traits\HashIdHelper;
     use Traits\LastActivedAtHelper;
     use Traits\ActiveUserHelper;
     use HasRoles;
