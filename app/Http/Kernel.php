@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use Fruitcake\Cors\HandleCors;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -92,5 +93,8 @@ class Kernel extends HttpKernel
 
         // 接口语言设置
         'change-locale' => \App\Http\Middleware\ChangeLocale::class,
+
+        // CORS
+        'cors' => HandleCors::class,
     ];
 }
