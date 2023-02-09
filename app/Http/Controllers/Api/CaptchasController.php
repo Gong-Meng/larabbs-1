@@ -11,7 +11,8 @@ class CaptchasController extends Controller
     public function store(CaptchaRequest $request, CaptchaBuilder $captchaBuilder)
     {
         $key = 'captcha-'.str_random(15);
-        $phone = $request->phone;
+        // 格式化手机号 去除 +86 去除空格
+        $phone = ltrim(phone($request->phone, 'CN', 'E164'), '+86');
 
         $captcha = $captchaBuilder->build();
         $expiredAt = now()->addMinutes(2);
