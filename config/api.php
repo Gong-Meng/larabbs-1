@@ -155,7 +155,7 @@ return [
     */
 
     'middleware' => [
-
+        'crouss.request' => \Fruitcake\Cors\HandleCors::class
     ],
 
     /*
