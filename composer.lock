@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cecc1fe6dc17d80078760240b8ab28a0",
+    "content-hash": "c466e644e01c56a2b8200aad4ec75316",
     "packages": [
         {
             "name": "cakephp/chronos",
@@ -9760,6 +9760,60 @@
                 }
             ],
             "time": "2021-12-12T22:59:22+00:00"
+        },
+        {
+            "name": "watson/rememberable",
+            "version": "3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dwightwatson/rememberable.git",
+                "reference": "d225d1c6733a4b47ad037df275f144858a968325"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dwightwatson/rememberable/zipball/d225d1c6733a4b47ad037df275f144858a968325",
+                "reference": "d225d1c6733a4b47ad037df275f144858a968325",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "illuminate/database": "^5.0|^6.0",
+                "illuminate/support": "^5.0|^6.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Watson\\Rememberable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dwight Watson",
+                    "email": "dwight@studiousapp.com"
+                }
+            ],
+            "description": "Query caching for Laravel 5",
+            "keywords": [
+                "caching",
+                "eloquent",
+                "laravel",
+                "remember"
+            ],
+            "support": {
+                "issues": "https://github.com/dwightwatson/rememberable/issues",
+                "source": "https://github.com/dwightwatson/rememberable/tree/3.2.1"
+            },
+            "time": "2019-10-04T00:29:10+00:00"
         },
         {
             "name": "webmozart/assert",
