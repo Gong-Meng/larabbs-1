@@ -12,9 +12,10 @@ $factory->define(App\Models\Topic::class, function (Faker $faker) {
     $created_at = $faker->dateTimeThisMonth($updated_at);
 
     return [
-        'title' => $sentence,
-        'body' => $faker->text(),
-        'excerpt' => $sentence,
+        'title'      => $sentence,
+        'body'       => $faker->text(),
+        'view_count' => $faker->numberBetween(0, 1000),
+        'excerpt'    => $sentence,
         'created_at' => $created_at,
         'updated_at' => $updated_at,
     ];
