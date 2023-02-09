@@ -21,9 +21,11 @@ class TopicsController extends Controller
 
 	public function index(Request $request, Topic $topic, User $user, Link $link)
     {
+        clock()->event('Importing tweets')->color('purple')->begin();
         $topics = $topic->withOrder($request->order)->paginate(20);
         $active_users = $user->getActiveUsers();
         $links = $link->getAllCached();
+        clock()->event('Importing tweets')->end();
 
         return view('topics.index', compact('topics', 'active_users', 'links'));
     }
