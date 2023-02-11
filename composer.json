@@ -17,6 +17,7 @@
         "intervention/image": "^2.4",
         "itsgoingd/clockwork": "^5.1",
         "jpush/jpush": "^3.5",
+        "kalnoy/nestedset": "^5.0",
         "laravel/framework": "5.7.*",
         "laravel/horizon": "~1.0",
         "laravel/tinker": "~1.0",
