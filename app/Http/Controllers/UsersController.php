@@ -6,12 +6,28 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Http\Requests\UserRequest;
 use App\Handlers\ImageUploadHandler;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class UsersController extends Controller
 {
     public function show(User $user)
     {
-        return view('users.show', compact('user'));
+        $qrcode = QrCode::format('png')
+                        ->size(300)
+                        ->margin(0)
+                        ->generate(route('users.show', $user));
+
+        return view('users.show', compact('user', 'qrcode'));
+    }
+
+    public function downloadQrcode(User $user)
+    {
+        return response()->stream(function () use ($user) {
+            echo $user->qrcode();
+        }, 200, [
+            "Content-type"        => "image/png",
+            "Content-Disposition" => "attachment; filename=user-{$user->id}-qrcode.png"
+        ]);
     }
 
     public function edit(User $user)
