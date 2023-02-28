@@ -43,8 +43,9 @@ class Topic extends Model
                 $query = $this->recentReplied();
                 break;
         }
+        return $query;
         // 预加载防止 N+1 问题
-        return $query->with('user', 'category');
+        // return $query->with('user', 'category');
     }
 
     public function scopeRecentReplied($query)
