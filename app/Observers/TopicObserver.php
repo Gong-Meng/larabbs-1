@@ -29,8 +29,14 @@ class TopicObserver
         }
     }
 
-    public function deleted(Topic $topic)
-    {
-        \DB::table('replies')->where('topic_id', $topic->id)->delete();
-    }
+    // public function deleted(Topic $topic)
+    // {
+    //     $topic->replies()->delete();
+    // }
+    //
+    // public function restored(Topic $topic)
+    // {
+    //     $topic->replies()->restore();
+    // }
+
 }
