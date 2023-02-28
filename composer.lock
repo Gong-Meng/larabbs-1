@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a3363df424fab13447c8e7929326c5d",
+    "content-hash": "839127af92a414ab5d267f175edfaf32",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -67,6 +67,94 @@
                 "source": "https://github.com/asm89/stack-cors/tree/v2.1.1"
             },
             "time": "2022-01-18T09:12:03+00:00"
+        },
+        {
+            "name": "awssat/laravel-visits",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/awssat/laravel-visits.git",
+                "reference": "adcb8901e87d8f6c5af4be97bf2ffc14abc94d3b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/awssat/laravel-visits/zipball/adcb8901e87d8f6c5af4be97bf2ffc14abc94d3b",
+                "reference": "adcb8901e87d8f6c5af4be97bf2ffc14abc94d3b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.5.0 || ~5.6.0 || ~5.7.0 || ~5.8.0 || ^6.0",
+                "jaybizzle/crawler-detect": "^1.2",
+                "php": "^7.2",
+                "spatie/laravel-referer": "^1.3",
+                "torann/geoip": "^1.0"
+            },
+            "require-dev": {
+                "doctrine/dbal": "^2.5",
+                "fzaninotto/faker": "^1.6",
+                "illuminate/support": "~5.5.0 || ~5.6.0 || ~5.7.0 || ~5.8.0 || ^6.0",
+                "mockery/mockery": "^1.2",
+                "orchestra/testbench": "^3.5 || ^3.6 || ^3.7 || ^3.8 || ^4.0",
+                "phpunit/phpunit": "^8.3",
+                "predis/predis": "^1.1"
+            },
+            "suggest": {
+                "ext-redis": "Needed if you are using redis as engine data of laravel-visits",
+                "illuminate/database": "Needed if you are using database as engine data of laravel-visits",
+                "predis/predis": "Needed if you are using redis as data engine of laravel-visits"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Awssat\\Visits\\VisitsServiceProvider"
+                    ],
+                    "aliases": {
+                        "Visits": "Awssat\\Visits\\Visits"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Awssat\\Visits\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bader Almutairi",
+                    "email": "bderemail@gmail.com"
+                },
+                {
+                    "name": "Abdulrahman Alshuwayi",
+                    "email": "hi@abdumu.com"
+                }
+            ],
+            "description": "Laravel Redis visits counter for Eloquent models",
+            "homepage": "https://github.com/awssat/laravel-visits",
+            "keywords": [
+                "cache",
+                "counter",
+                "laravel",
+                "package",
+                "php",
+                "redis",
+                "visits"
+            ],
+            "support": {
+                "issues": "https://github.com/awssat/laravel-visits/issues",
+                "source": "https://github.com/awssat/laravel-visits/tree/2.2.0"
+            },
+            "time": "2019-12-14T04:15:49+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -2823,6 +2911,58 @@
             },
             "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "jaybizzle/crawler-detect",
+            "version": "v1.2.113",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JayBizzle/Crawler-Detect.git",
+                "reference": "6710b75871da2b718550c2bc33388315a3b20151"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/6710b75871da2b718550c2bc33388315a3b20151",
+                "reference": "6710b75871da2b718550c2bc33388315a3b20151",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8|^5.5|^6.5|^9.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jaybizzle\\CrawlerDetect\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Beech",
+                    "email": "m@rkbee.ch",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CrawlerDetect is a PHP class for detecting bots/crawlers/spiders via the user agent",
+            "homepage": "https://github.com/JayBizzle/Crawler-Detect/",
+            "keywords": [
+                "crawler",
+                "crawler detect",
+                "crawler detector",
+                "crawlerdetect",
+                "php crawler detect"
+            ],
+            "support": {
+                "issues": "https://github.com/JayBizzle/Crawler-Detect/issues",
+                "source": "https://github.com/JayBizzle/Crawler-Detect/tree/v1.2.113"
+            },
+            "time": "2023-02-02T21:01:40+00:00"
         },
         {
             "name": "jpush/jpush",
@@ -7680,6 +7820,67 @@
                 "source": "https://github.com/spatie/laravel-permission/tree/v2"
             },
             "time": "2019-09-02T17:12:21+00:00"
+        },
+        {
+            "name": "spatie/laravel-referer",
+            "version": "1.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-referer.git",
+                "reference": "5d4ea7603f1aca9f194d731893a3ca731da36631"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-referer/zipball/5d4ea7603f1aca9f194d731893a3ca731da36631",
+                "reference": "5d4ea7603f1aca9f194d731893a3ca731da36631",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "~5.4.0|~5.5.0|~5.6.0|~5.7.0|~5.8.0",
+                "illuminate/http": "~5.4.0|~5.5.0|~5.6.0|~5.7.0|~5.8.0",
+                "illuminate/support": "~5.4.0|~5.5.0|~5.6.0|~5.7.0|~5.8.0",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.4.3|~3.5.0|~3.6.0|~3.7.0|~3.8.0",
+                "phpunit/phpunit": "^5.7|^6.2|^7.0|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\Referer\\RefererServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Referer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Keep a visitor's original referer in session",
+            "homepage": "https://github.com/spatie/laravel-referer",
+            "keywords": [
+                "laravel-referer",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-referer/issues",
+                "source": "https://github.com/spatie/laravel-referer/tree/master"
+            },
+            "time": "2019-02-27T12:07:39+00:00"
         },
         {
             "name": "spatie/temporary-directory",
