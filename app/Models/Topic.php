@@ -5,12 +5,14 @@ namespace App\Models;
 use EloquentFilter\Filterable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Askedio\SoftCascade\Traits\SoftCascadeTrait;
+use Venturecraft\Revisionable\RevisionableTrait;
 
 class Topic extends Model
 {
     use Filterable;
     use SoftDeletes;
     use SoftCascadeTrait;
+    use RevisionableTrait;
 
     protected $softCascade = ['replies'];
 
