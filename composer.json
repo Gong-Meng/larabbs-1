@@ -9,6 +9,7 @@
         "askedio/laravel-soft-cascade": "^5.5",
         "awssat/laravel-visits": "^2.2",
         "barryvdh/laravel-cors": "^2.0",
+        "beyondcode/laravel-self-diagnosis": "^1.5",
         "chumper/zipper": "^1.0",
         "dingo/api": "^2.2",
         "doctrine/dbal": "^2.6",
