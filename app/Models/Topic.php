@@ -14,6 +14,14 @@ class Topic extends Model
     use SoftCascadeTrait;
     use RevisionableTrait;
 
+    protected $revisionCreationsEnabled = true;
+
+    protected $keepRevisionOf = ['title', 'category_id', 'deleted_at'];
+
+    // 限制某个模型的记录数
+    protected $historyLimit    = 5;
+    protected $revisionCleanup = true;
+
     protected $softCascade = ['replies'];
 
     protected $fillable = ['title', 'body', 'category_id', 'excerpt', 'slug'];
