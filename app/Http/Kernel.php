@@ -61,6 +61,9 @@ class Kernel extends HttpKernel
 
             // 记录 referer
             \Spatie\Referer\CaptureReferer::class,
+
+            // 设置语言
+            \App\Http\Middleware\ChangeLocale::class,
         ],
 
         // API 中间件组，应用于 routes/api.php 路由文件
