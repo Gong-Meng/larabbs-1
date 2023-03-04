@@ -11,6 +11,7 @@
         "barryvdh/laravel-cors": "^2.0",
         "beyondcode/laravel-self-diagnosis": "^1.5",
         "chumper/zipper": "^1.0",
+        "dimsav/laravel-translatable": "^10.0",
         "dingo/api": "^2.2",
         "doctrine/dbal": "^2.6",
         "fideloper/proxy": "~4.0",
