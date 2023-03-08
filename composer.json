@@ -6,10 +6,12 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "ext-xlswriter": "*",
         "askedio/laravel-soft-cascade": "^5.5",
         "awssat/laravel-visits": "^2.2",
         "barryvdh/laravel-cors": "^2.0",
         "beyondcode/laravel-self-diagnosis": "^1.5",
+        "binarytorch/larecipe": "^2.6",
         "chumper/zipper": "^1.0",
         "dimsav/laravel-translatable": "^10.0",
         "dingo/api": "^2.2",
@@ -54,8 +56,7 @@
         "venturecraft/revisionable": "^1.40",
         "viacreative/sudo-su": "~1.1",
         "vinkla/hashids": "^5.1",
-        "watson/rememberable": "^3.2",
-        "ext-xlswriter": "*"
+        "watson/rememberable": "^3.2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "~3.1",
