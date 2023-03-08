@@ -17,6 +17,7 @@ class CreateOrderTestTable extends Migration
             $table->increments('id');
             $table->string('type', 255)->default('')->comment('类型');
             $table->string('value', 255)->default('')->comment('值');
+            $table->string('name', 255)->default('')->comment('字段名称');
             $table->timestamps();
         });
     }
