@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use App\Exports\TopicsExport;
 use App\Models\Topic;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
 use App\Models\Category;
 use Auth;
 use App\Handlers\ImageUploadHandler;
 use App\Models\User;
 use App\Models\Link;
+use App\Imports\TopicsImport;
+
 
 class TopicsController extends Controller
 {
@@ -171,24 +172,36 @@ class TopicsController extends Controller
         return $topicsExport->withinDays($request->days);
     }
 
-    public function import(Request $request)
+    // public function import(Request $request)
+    // {
+    //     \Excel::load($request->excel, function($reader) {
+    //         // 获取第一个 数据表
+    //         $sheet = $reader;
+    //         // 遍历数据表中的数据
+    //
+    //         $sheet->each(function ($data) {
+    //             dd($data);
+    //         });
+    //
+    //
+    //         // $sheet->each(function($topicData) {
+    //         //     $topic = Topic::find((int)$topicData['id']);
+    //         //     if (!$topic) {
+    //         //         return;
+    //         //     }
+    //         //
+    //         //     $topic->title = $topicData['标题'];
+    //         //     $topic->category_id = (int)$topicData['分类id'];
+    //         //     $topic->save();
+    //         // });
+    //     });
+    //
+    //     return redirect()->route('topics.excel')->with('success', '导入成功！');
+    // }
+
+    public function import(Request $request, TopicsImport $topicsImport)
     {
-        \Excel::load($request->excel, function($reader) {
-            // 获取第一个 数据表
-            $sheet = $reader;
-            // 遍历数据表中的数据
-            $sheet->each(function($topicData) {
-                $topic = Topic::find((int)$topicData['id']);
-                if (!$topic) {
-                    return;
-                }
-
-                $topic->title = $topicData['标题'];
-                $topic->category_id = (int)$topicData['分类id'];
-                $topic->save();
-            });
-        });
-
-        return redirect()->route('topics.excel')->with('success', '导入成功！');
+        $topicsImport->import($request->file('excel'));
+        return back()->with('success', '导入成功');
     }
 }
