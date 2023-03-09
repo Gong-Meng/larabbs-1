@@ -66,6 +66,7 @@
         "beyondcode/laravel-query-detector": "^1.7",
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",
+        "laravel/telescope": "^1.2",
         "mockery/mockery": "0.9.*",
         "nunomaduro/collision": "*",
         "orangehill/iseed": "~2.5",
