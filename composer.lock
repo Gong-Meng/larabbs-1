@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "07704e07f8be560bb1e8f5a0b2eb9963",
+    "content-hash": "73cc6c9afc187705142d9334e37e5761",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -4389,6 +4389,58 @@
                 "source": "https://github.com/liyu001989/dingo-serializer-switch/tree/master"
             },
             "time": "2020-06-24T04:09:03+00:00"
+        },
+        {
+            "name": "lubusin/laravel-decomposer",
+            "version": "v1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lubusIN/laravel-decomposer.git",
+                "reference": "e060fff7aefacd8664be0f53132986ecf481a802"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lubusIN/laravel-decomposer/zipball/e060fff7aefacd8664be0f53132986ecf481a802",
+                "reference": "e060fff7aefacd8664be0f53132986ecf481a802",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.0",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "illuminate/http": "^5.0",
+                "illuminate/routing": "^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Lubusin\\Decomposer\\DecomposerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lubusin\\Decomposer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Harish Toshniwal",
+                    "email": "harish@lubus.in"
+                }
+            ],
+            "description": "A Laravel package to decompose your installed packages, their dependencies, your app & server environment",
+            "support": {
+                "issues": "https://github.com/lubusIN/laravel-decomposer/issues",
+                "source": "https://github.com/lubusIN/laravel-decomposer/tree/master"
+            },
+            "time": "2017-08-24T11:24:51+00:00"
         },
         {
             "name": "maatwebsite/excel",

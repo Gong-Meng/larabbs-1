@@ -42,3 +42,13 @@ Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 Route::get('zip', 'ZipController@index')->name('zip.index');
 Route::post('zip/download', 'ZipController@download')->name('zip.download');
 Route::post('zip/upload', 'ZipController@upload')->name('zip.upload');
+
+Route::get('decompose','\Lubusin\Decomposer\Controllers\DecomposerController@index');
+
+Route::get('decompose/array', function() {
+    dd(Lubusin\Decomposer\Decomposer::getReportArray());
+});
+
+Route::get('decompose/json', function() {
+    dd(Lubusin\Decomposer\Decomposer::getReportJson());
+});
